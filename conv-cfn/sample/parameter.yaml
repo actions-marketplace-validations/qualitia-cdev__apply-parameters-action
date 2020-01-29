@@ -1,0 +1,9 @@
+HOGEHOGE:
+    MYMY: "HOHOHO OHOH"
+
+THIS_IS_SAMPLE: 234
+
+THIS_IS_ARRAY_SAMPLE:
+    ARRAY:
+        - ARRAY_0
+        - ARRAY_1

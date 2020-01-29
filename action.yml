@@ -1,0 +1,31 @@
+# action.yml
+name: "apply parameters action"
+description: "Put parameter to template file"
+
+inputs:
+    parameter:
+        description: "Parameter file"
+        required: true
+        default: ""
+
+    target-dir:
+        description: "The target directory path which has template files"
+        required: true
+        default: ""
+
+    filter-file:
+        description: "conv-cfn will pick up files by the filter-file options"
+        required: true
+        default: "*.cf.yaml"
+
+outputs:
+    result:
+        description: "Show the result of deploying"
+
+runs:
+    using: "docker"
+    image: "Dockerfile"
+    args:
+        - ${{ inputs.parameter }}
+        - ${{ inputs.target-dir }}
+        - ${{ inputs.filter-file }}
